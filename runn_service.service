@@ -1,0 +1,14 @@
+[Unit]
+Description=Run My Check Code
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/amitkiran/deployment_repos/Checker_service
+ExecStart=/usr/bin/python3 /home/amitkiran/deployment_repos/Checker_service/RunnerMain.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
