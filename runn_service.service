@@ -13,7 +13,7 @@ Group=amitkiran
 WorkingDirectory=/home/amitkiran/deployment_repos/Checker_service
 
 # Use venv python directly (NO activation needed)
-ExecStart=/home/amitkiran/deployment_repos/Checker_service/venv/bin/python3 /home/amitkiran/deployment_repos/Checker_service/RunnerMain.py
+ExecStart=/home/amitkiran/deployment_repos/Checker_service/projectVenv/bin/python3 /home/amitkiran/deployment_repos/Checker_service/RunnerMain.py
 
 # Environment variables (optional)
 # Environment=ENV=prod
