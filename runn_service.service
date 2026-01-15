@@ -10,10 +10,10 @@ User=amitkiran
 Group=amitkiran
 
 # Set working directory
-WorkingDirectory=/home/amitkiran/deployment_repos/Checker_service
+WorkingDirectory=/tmp/deployment_repos/Checker_service
 
 # Use venv python directly (NO activation needed)
-ExecStart=/home/amitkiran/deployment_repos/Checker_service/projectVenv/bin/python3 RunnerMain.py
+ExecStart=/tmp/deployment_repos/Checker_service/projectVenv/bin/python3 RunnerMain.py
 
 # Environment variables (optional)
 # Environment=ENV=prod
