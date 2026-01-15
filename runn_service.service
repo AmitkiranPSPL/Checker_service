@@ -1,14 +1,32 @@
 [Unit]
-Description=Run My Check Code
+Description=Project B Python Service
 After=network.target
 
 [Service]
 Type=simple
-User=root
+
+# Run as normal user
+User=amitkiran
+Group=amitkiran
+
+# Set working directory
 WorkingDirectory=/home/amitkiran/deployment_repos/Checker_service
-ExecStart=/usr/bin/python3 /home/amitkiran/deployment_repos/Checker_service/RunnerMain.py
+
+# Use venv python directly (NO activation needed)
+ExecStart=/home/amitkiran/deployment_repos/Checker_service/venv/bin/python3 /home/amitkiran/deployment_repos/Checker_service/RunnerMain.py
+
+# Environment variables (optional)
+# Environment=ENV=prod
+# Environment=PYTHONUNBUFFERED=1
+
+# Restart policy
 Restart=always
 RestartSec=5
 
+# Logging
+StandardOutput=journal
+StandardError=journal
+
 [Install]
 WantedBy=multi-user.target
+
