@@ -6,8 +6,8 @@ After=network.target
 Type=simple
 
 # Run as normal user
-User=amitkiran
-Group=amitkiran
+User=root
+#Group=amitkiran
 
 # Set working directory
 WorkingDirectory=/tmp/deployment_repos/Checker_service
